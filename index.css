@@ -1,4 +1,263 @@
-/* ✅ RESPONSIVE BREAKPOINTS */
+✅ RESPONSIVE BREAKPOINTS
+/* =========================
+   RESPONSIVE CSS ONLY
+   ========================= */
+
+/* Prevent horizontal scrolling */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   TABLET
+   769px - 992px
+   ========================= */
+
+@media (max-width: 992px) {
+
+  /* Navigation */
+  .site-nav {
+    display: none !important;
+  }
+
+  .menu-btn {
+    display: block !important;
+  }
+
+  /* Hero */
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  .profile-photo {
+    max-width: 100%;
+    margin: 0 auto !important;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  .about-stats .profile-photo {
+    margin: 0 auto !important;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-info {
+    margin-top: 0 !important;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   577px - 768px
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Hero */
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 280px;
+    max-width: 80vw;
+    height: auto;
+    margin: 0 auto !important;
+  }
+
+  /* About */
+  .about-grid {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Certificates */
+  .cert-scroll {
+    overflow-x: auto;
+  }
+
+  .cert-card {
+    flex-shrink: 0;
+  }
+
+  /* Contact */
+  .contact-grid {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   400px - 576px
+   ========================= */
+
+@media (max-width: 576px) {
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Hero */
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .profile-photo {
+    width: 240px;
+    max-width: 75vw;
+    height: auto;
+  }
+
+  /* About */
+  .about-grid {
+    gap: 20px;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects */
+  .project-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .project-card img {
+    height: auto;
+  }
+
+  /* Certificates */
+  .cert-scroll {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .cert-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Contact */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+   400px AND BELOW
+   ========================= */
+
+@media (max-width: 400px) {
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .lead {
+    font-size: 0.9rem;
+  }
+
+  .profile-photo {
+    width: 210px;
+    max-width: 70vw;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+}
 
 /* === 1440px === */
 @media (min-width: 1440px) {
@@ -724,6 +983,8 @@ font-size:22px;
 /* Buttons */
 .btn1
 {
+  /* height:50px;
+  width:150px; */
   box-shadow: 1px 1px 10px rgba(0,0,0,0.7);
 }
 .btn2
@@ -732,9 +993,8 @@ font-size:22px;
   margin-left:15px;
 }
 .btn{
-
   display:inline-block;
-  padding:10px 16px;;
+  padding:14px 20px;
   border-radius:10px;
   background:var(--accent);
   color:#fff;
